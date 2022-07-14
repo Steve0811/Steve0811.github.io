@@ -24,7 +24,7 @@ $(document).ready(function() {
             </ul>
         </header>
         `);
-    }else if(href.indexOf('/index.html')  !== -1){
+    }else {
         $('body').prepend(`
         <header id="header">
             <h1 class="logo"><a href="./index.html" title="回到主頁">Steve Chan</a></h1>
