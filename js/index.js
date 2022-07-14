@@ -23,7 +23,7 @@ $(document).ready(function() {
     $(window).on('scroll', function() {
             y = scrollY + window.innerHeight;
 
-            $('header').toggleClass('black', y > 110);
+            $('header').toggleClass('black', y > 110 + window.innerHeight);
         
             for(let i = 0; i < contentBoxes.length; i++) {
                 $(contentBoxes[i]).toggleClass('fade_in', y > contentBoxY[i]);

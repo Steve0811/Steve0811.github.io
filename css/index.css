@@ -279,6 +279,7 @@ footer {
     border-top: 1px solid rgba(255,255,255,0.1);
     background: var(--text-background-color);
     margin-top: 50px;
+    cursor: pointer;
 }
 footer p {
     color: var(--text_color);

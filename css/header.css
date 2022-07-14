@@ -45,6 +45,9 @@ header .menu li a::after {
 header .menu li a:hover::after {
   width: 100%;
 }
+header .menu li a.active::after {
+  width: 100%;
+}
 
 @media (max-width: 500px) {
   #header .logo {
