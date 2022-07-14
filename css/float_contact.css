@@ -1,0 +1,32 @@
+body .float_contact {
+  position: fixed;
+  bottom: 35px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+body .float_contact > a {
+  background-color: var(--text-background-color-opacity);
+  border-radius: 50%;
+  padding: 13px;
+  display: grid;
+  place-content: center;
+}
+body .float_contact > a > ion-icon {
+  font-size: 40px;
+  transition: 0.5s;
+}
+body .float_contact > a:hover > ion-icon {
+  color: var(--text_hover_color);
+}
+
+@media (max-width: 500px) {
+  .float_contact {
+    bottom: 10px;
+    right: 8px;
+  }
+  .float_contact > a > ion-icon {
+    font-size: 22px !important;
+  }
+}/*# sourceMappingURL=float_contact.css.map */

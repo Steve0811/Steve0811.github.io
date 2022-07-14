@@ -1,0 +1,337 @@
+@import url(reset.css);
+@import url(var.css);
+@import url(header.css);
+@import url(float_contact.css);
+@import url(scroll_bar.css);
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+a {
+    text-decoration:  none;
+    color: var(--text_color);
+}
+
+a::selection, p::selection, h1::selection, h2::selection, h3::selection, h4::selection ,li::selection, span::selection{
+    color: var(--text_hover_color);
+    background: transparent;
+}
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito', 'Noto Sans TC', sans-serif;
+    font-family: 'Cormorant Garamond','Noto Sans TC', serif;
+    background: linear-gradient(to bottom, #201f1f, #362d04);
+    font-size: 22px;
+    
+}
+
+.banner {
+    position: relative;;
+    width: 100%;
+    min-height: 98vh;
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+    background-color: var(--text-background-color);
+    z-index: -1;
+}
+
+.banner::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(./../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.5;
+    filter: blur(5px);
+}
+
+.banner .idea {
+    width: 100vw;
+    min-height: 100vh;
+    color: var(--text_color);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.3rem;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 3rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+    display: grid;
+    place-content: center;
+    text-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    padding: 0px 50px;
+    animation: fade_in 1.5s ease;
+}
+
+.banner .idea span {
+    font-size: 1.3rem;
+}
+
+.contentBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text_color);
+    padding: 80px 0px;
+    margin: 50px 0px;
+    gap: 75px;
+    border: 1px solid var(--text_second_color);
+    border-radius: 5px;
+    background-color: var(--text-background-color);
+}
+
+.content .box {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    word-wrap: break-word;
+}
+
+.content .box.fade_in {
+    animation: fade_in 1.5s ease;
+}
+
+.content .box .title{
+    color: var(--text_second_color);
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-bottom: 1px solid var(--text_color);
+    word-wrap: break-word;
+    text-align: center;
+}
+
+body .content .box .primary_title {
+    color: var(--text_second_color);
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-bottom: 1px solid var(--text_color);
+}
+
+
+.content .box .text {
+    display: block;
+    font-family: 'Nunito', 'Noto Sans TC', sans-serif;
+    font-size: 1rem;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 300;
+    line-height: 1.6rem;
+    
+}
+
+.content .box .text .tag {
+    font-size: 1.4rem;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    list-style: inside;
+}
+
+.content .box .text .tag:first-child {
+    margin-top: 5px;
+}
+
+.content .box .text .tag::marker {
+   font-size: 1rem;
+}
+
+.contentBox .moreBox {
+    min-width: 85%;
+    min-height: 55vh;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+
+.contentBox .moreBox .left,
+.contentBox .moreBox .right {
+    display: grid;
+    place-content: center;
+    background-repeat: no-repeat;
+    background-size: 100vh;
+    flex-grow: 1;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.contentBox .moreBox .left .title,
+.contentBox .moreBox .right .title {
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 8px 30px;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.4);
+    transition: 0.5s;
+} 
+
+.contentBox .moreBox .left {
+    background-image: url(./../img/music.jpg);
+}
+.contentBox .moreBox .right {
+    background-image: url(./../img/media.jpg);
+}
+
+.contentBox .moreBox .left:hover,
+.contentBox .moreBox .right:hover {
+    background-size: 110vh;
+}
+
+.contentBox .moreBox .left:hover .title,
+.contentBox .moreBox .right:hover .title {
+    color: var(--text_second_color);
+}
+
+.contactBox {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background: linear-gradient(135deg, #161616, #2a2a2a);
+}
+
+.contactBox .title {
+    color: var(--text_second_color);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    border-bottom: 1px solid var(--text_color);
+    font-weight: 500;
+}
+
+.contactBox .contact {
+    font-family: 'Nunito', 'Noto Sans TC', sans-serif;
+    font-size: 1rem;
+    width: 40%;
+    text-align: center;
+    color: var(--text_color);
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.contactBox .contact a {
+    transition: 0.5s;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.contactBox .contact > p {
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.contactBox .contact a:hover {
+    color: var(--text_hover_color)
+}
+.contactBox .contact.fade_in {
+    animation: fade_in 1.5s ease;
+}
+.contactBox .title.fade_in {
+    animation: fade_in 1.5s ease;
+}
+
+
+footer {
+    width: 100%;
+    min-height: 5vh;
+    display: grid;
+    place-content: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    background: var(--text-background-color);
+    margin-top: 50px;
+}
+footer p {
+    color: var(--text_color);
+    font-size: 0.85rem;
+}
+
+/* phone */
+
+@media (max-width:500px) {
+    .banner::after {
+        background-position-x: 45%;
+    }
+    .banner .idea {
+        font-size: 1.8rem;
+    }
+    .banner .idea span {
+        font-size: 1rem;
+    }
+    .content .box .title {
+        font-size: 1.5rem;
+        white-space: wrap;
+    }
+    .content .box .text {
+        font-size: 0.8rem;
+    }
+    .content .box .text .tag{
+        font-size: 1.1rem;
+    }
+    .contentBox .moreBox {
+        min-height: 35vh;
+    }
+    .contentBox .moreBox .left {
+        background-position: 75% 45%;
+    }
+    .contentBox .moreBox .left .title,
+    .contentBox .moreBox .right .title {
+         font-size: 1.3rem;
+    } 
+    .contactBox {
+        min-height: 40vh;
+    }
+    .contactBox .title{
+        font-size: 1.5rem;
+    }
+    .contactBox .contact{
+        font-size: 0.8rem;
+    }
+}
+
+/* pad */
+
+@media (max-width:900px) {
+    .banner::after {
+        background-position-x: 45%;
+    }
+} 
