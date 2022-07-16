@@ -35,5 +35,15 @@ $(document).ready(function() {
 
     })
 
+    //////////
+
+    $('.playBtn').on('click', function() {
+        let banner = $('.banner');
+        window.scrollTo({
+            top: banner.outerHeight() - 50,
+            behavior: "smooth"
+        })
+    })
+
     
 })
