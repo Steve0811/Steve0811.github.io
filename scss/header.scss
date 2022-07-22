@@ -28,8 +28,9 @@ header {
     .menu {
       display: flex;
       gap: 30px;
-  
+      
       li a {
+        font-family: 'Cormorant Garamond','Noto Sans TC', serif;
         letter-spacing: 1px;
         font-size: 1.4rem;
         font-weight: 500;

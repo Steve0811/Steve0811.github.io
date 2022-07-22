@@ -9,6 +9,23 @@ header {
   
     .content {
       margin-top: 200px;
+
+      .contactBtn{
+        font-family: 'Cormorant Garamond', serif;
+        color: var(--text_color);
+        font-size: 1.4rem;
+        font-weight: 500;
+        padding: 15px 50px;
+        border: 1px solid var(--text_second_color);
+        border-radius: 10px;
+        transition: .5s; 
+        
+      }
+
+      .contactBtn:hover {
+        color: var(--text-background-color);
+        background-color: var(--text_second_color);
+      }
   
       .box {
         width: 100%;

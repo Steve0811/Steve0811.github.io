@@ -11,6 +11,13 @@ $(document).ready(function() {
     })
 
     // console.log(contentBoxY);
+
+    let moreBoxTitle = document.querySelectorAll('.contentBox .moreBoxTitle');
+    let moreBox = document.querySelectorAll('.contentBox .moreBox');
+
+
+    let serviceBoxTitle = document.querySelectorAll('.contentBox .serviceBoxTitle');
+    let serviceBox = document.querySelectorAll('.contentBox .serviceBox');
     
     let contact_contact = document.querySelectorAll('.contactBox .contact');
     let contact_title = document.querySelectorAll('.contactBox .title');
@@ -28,6 +35,14 @@ $(document).ready(function() {
             for(let i = 0; i < contentBoxes.length; i++) {
                 $(contentBoxes[i]).toggleClass('fade_in', y > contentBoxY[i]);
             }
+
+            
+            $(moreBoxTitle).toggleClass('fade_in', y > $(moreBoxTitle).offset().top - 100);
+            $(moreBox).toggleClass('fade_in', y > $(moreBoxTitle).offset().top - 100);
+
+
+            $(serviceBoxTitle).toggleClass('fade_in', y > $(serviceBoxTitle).offset().top - 100);
+            $(serviceBox).toggleClass('fade_in', y > $(serviceBoxTitle).offset().top - 100);
 
             $(contact_contact).toggleClass('fade_in', y > $(contact_contact).offset().top - 100);
             $(contact_title).toggleClass('fade_in', y > $(contact_contact).offset().top - 100);
