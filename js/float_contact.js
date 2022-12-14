@@ -1,5 +1,5 @@
-$(document).ready(function() {
-    $('body').append(`
+$(document).ready(function () {
+  $('body').append(`
         <div class="float_contact">
             <a href="https://www.instagram.com/cfp_salmonsushi/" target="_blank">
                 <ion-icon name="logo-instagram"></ion-icon>

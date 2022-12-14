@@ -1,11 +1,11 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-    let href = window.location.pathname;
+  let href = window.location.pathname;
 
-    console.log(href);
+  console.log(href);
 
-    if(href.indexOf('/music.html') !== -1) {
-        $('body').prepend(`
+  if (href.indexOf('/music.html') !== -1) {
+    $('body').prepend(`
         <header id="header">
             <h1 class="logo"><a href="./index.html" title="回到主頁">Steve Chan</a></h1>
             <ul class="menu">
@@ -14,8 +14,8 @@ $(document).ready(function() {
             </ul>
         </header>
         `);
-    }else if (href.indexOf('/media.html')  !== -1) {
-        $('body').prepend(`
+  } else if (href.indexOf('/media.html') !== -1) {
+    $('body').prepend(`
         <header id="header">
             <h1 class="logo"><a href="./index.html" title="回到主頁">Steve Chan</a></h1>
             <ul class="menu">
@@ -24,8 +24,8 @@ $(document).ready(function() {
             </ul>
         </header>
         `);
-    }else {
-        $('body').prepend(`
+  } else {
+    $('body').prepend(`
         <header id="header">
             <h1 class="logo"><a href="./index.html" title="回到主頁">Steve Chan</a></h1>
             <ul class="menu">
@@ -34,8 +34,8 @@ $(document).ready(function() {
             </ul>
         </header>
         `);
-    }
+  }
 
-    
+
 })
 

@@ -6,4 +6,8 @@
     --text_second_color: #fed54e;
     --text_third_color: #e7c248;
     --text_hover_color: #b79a3d; 
+    --z-top: 999;
+    --z-model: 900;
+    --z-overlay:800;
+    --z-header: 700;
 }

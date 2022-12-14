@@ -1,4 +1,5 @@
 header {
+  opacity: 1;
   width: 100%;
   position: fixed;
   top: 0;
@@ -6,9 +7,9 @@ header {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  padding: 28px 30px;
-  z-index: 400;
-  transition: 0.7s;
+  padding: 20px 30px;
+  z-index: 1000;
+  transition: 0.5s;
   color: var(--text_color);
 }
 header.black {
@@ -51,6 +52,9 @@ header .menu li a:hover::after {
 }
 header .menu li a.active::after {
   width: 100%;
+}
+header.notShow {
+  opacity: 0;
 }
 
 @media (max-width: 500px) {

@@ -33,10 +33,12 @@ body .content .box ul {
 body .content .box iframe {
   margin-top: 10px;
   margin-bottom: 20px;
-  width: 100% !important;
+  height: 550px;
+  max-width: 1000px;
+  width: 80%;
 }
 body .content .box iframe[title="YouTube video player"] {
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 body .content .box > div {
   margin-bottom: 100px;
@@ -44,6 +46,7 @@ body .content .box > div {
 
 @media (max-width: 750px) {
   body .content .box iframe {
+    height: 315px;
     width: 100%;
   }
 }/*# sourceMappingURL=music.css.map */
